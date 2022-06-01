@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wish</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="myNav" class="overlay button">
+    <div class="overlay-content">
+      <p>মোবাইলের সাউন্ড বাড়ানো আছে? হেডফোন আছে? </p>
+      <a href="https://youtu.be/Q7mPIpgZiU0">হেডফোন আছে 🤗</a>
+      <p style="padding-bottom: 10px;">Or</p>
+        <div class="box-2">
+          <div class="btn btn-two">
+            <span onclick="closeNav()">হেডফোন নাই😒</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- add confetti.mp3 and keep controls of and hidden -->
+  <audio id="sound1" src="confetti.mp3" preload="auto" controls hidden></audio>
+  <audio id="sound2" src="song.mp3" preload="auto" controls hidden></audio>
+  <div class="main_header">
+    <div class="center_div">
+      <p >
+        HAPPY BIRTHDAY
+        <br />
+        🎂Sakib🎂
+        <br>
+         <br>
+         <br>
+         আরেকটু বুড়ো হওয়ার শুভেচ্ছা  
+          <br>  
+      </p>      
+    <!--an hidden iframe -->
+  
+      
+    
+    
+    </div>
+
+</div>
+</body>
+
+
+
+<script src="./confetti.js"></script>
+<script>
+ //confetti functions
+ const startit = () => {
+    setTimeout(function () {
+      confetti.start();   
+    }, 100);
+  };
+
+  const stopit = () => {
+    setTimeout(function () {
+      confetti.stop();
+    }, 20000);
+  };
+
+  function openNav() {
+  document.getElementById("myNav").style.display = "block";
+}
+  openNav()
+function closeNav() {
+  document.title = "Happy Birthday";
+  document.getElementById("myNav").style.display = "none";
+    a = document.getElementById('sound1');
+    b = document.getElementById('sound2');
+    a.play();
+    b.play()
+    startit();
+    stopit();
+}
+</script>
+
+
+
+
+</html>
